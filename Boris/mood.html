@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Mood Playlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mood.css">
 </head>
 <body>
     <header>
@@ -23,62 +26,81 @@
         </div>
       </nav>
     </header>
-    <h1>Select Your Mood</h1>
-    <button onclick="location.href='#calm'">Calm</button>
-    <button onclick="location.href='#inspired'">Inspired</button>
-    <button onclick="location.href='#tired'">Tired</button>
-    <button onclick="location.href='#sad'">Sad</button>
-    <button onclick="location.href='#furious'">Furious</button>
-    <button onclick="location.href='#lonely'">Lonely</button>
-    <button onclick="location.href='#surprise'">Surprise Me</button>
+    <div class="content">
+        <h1>Select Your Mood</h1>
+        <div class="mood-buttons">
+            <button data-mood="calm">Calm</button>
+            <button data-mood="inspired">Inspired</button>
+            <button data-mood="tired">Tired</button>
+            <button data-mood="sad">Sad</button>
+            <button data-mood="furious">Furious</button>
+            <button data-mood="lonely">Lonely</button>
+            <button data-mood="surprise">Surprise Me</button>
+        </div>
 
-    <h2 id="calm">Calm Playlist</h2>
-    <ul>
-        <li>Calm Song 1</li>
-        <li>Calm Song 2</li>
-        <li>Calm Song 3</li>
-    </ul>
+        <section class="playlist" id="calm">
+            <h2>Calm Playlist</h2>
+            <ul>
+                <li>Calm Song 1</li>
+                <li>Calm Song 2</li>
+                <li>Calm Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="inspired">Inspired Playlist</h2>
-    <ul>
-        <li>Inspired Song 1</li>
-        <li>Inspired Song 2</li>
-        <li>Inspired Song 3</li>
-    </ul>
+        <section class="playlist" id="inspired">
+            <h2>Inspired Playlist</h2>
+            <ul>
+                <li>Inspired Song 1</li>
+                <li>Inspired Song 2</li>
+                <li>Inspired Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="tired">Tired Playlist</h2>
-    <ul>
-        <li>Tired Song 1</li>
-        <li>Tired Song 2</li>
-        <li>Tired Song 3</li>
-    </ul>
+        <section class="playlist" id="tired">
+            <h2>Tired Playlist</h2>
+            <ul>
+                <li>Tired Song 1</li>
+                <li>Tired Song 2</li>
+                <li>Tired Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="sad">Sad Playlist</h2>
-    <ul>
-        <li>Sad Song 1</li>
-        <li>Sad Song 2</li>
-        <li>Sad Song 3</li>
-    </ul>
+        <section class="playlist" id="sad">
+            <h2>Sad Playlist</h2>
+            <ul>
+                <li>Sad Song 1</li>
+                <li>Sad Song 2</li>
+                <li>Sad Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="furious">Furious Playlist</h2>
-    <ul>
-        <li>Furious Song 1</li>
-        <li>Furious Song 2</li>
-        <li>Furious Song 3</li>
-    </ul>
+        <section class="playlist" id="furious">
+            <h2>Furious Playlist</h2>
+            <ul>
+                <li>Furious Song 1</li>
+                <li>Furious Song 2</li>
+                <li>Furious Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="lonely">Lonely Playlist</h2>
-    <ul>
-        <li>Lonely Song 1</li>
-        <li>Lonely Song 2</li>
-        <li>Lonely Song 3</li>
-    </ul>
+        <section class="playlist" id="lonely">
+            <h2>Lonely Playlist</h2>
+            <ul>
+                <li>Lonely Song 1</li>
+                <li>Lonely Song 2</li>
+                <li>Lonely Song 3</li>
+            </ul>
+        </section>
 
-    <h2 id="surprise">Surprise Me Playlist</h2>
-    <ul>
-        <li>Surprise Song 1</li>
-        <li>Surprise Song 2</li>
-        <li>Surprise Song 3</li>
-    </ul>
+        <section class="playlist" id="surprise">
+            <h2>Surprise Me Playlist</h2>
+            <ul>
+                <li>Surprise Song 1</li>
+                <li>Surprise Song 2</li>
+                <li>Surprise Song 3</li>
+            </ul>
+        </section>
+    </div>
+    <script src="mood.js"></script>
 </body>
 </html>

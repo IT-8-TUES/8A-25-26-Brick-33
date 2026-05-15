@@ -1,0 +1,44 @@
+:root{--accent:#ff3b3b;--bg:#0f1720;--card:#0f2633;--muted:#9aa6b2}
+*{box-sizing:border-box}
+body{margin:0;font-family:Montserrat, sans-serif;color:#e6f0f2;
+    background-color:#1a3a52;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.00) 40%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.00) 60%),
+        linear-gradient(180deg,#1a3a52 0%,#2a5a8a 60%,#3a7aaa 100%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><g fill="rgba(255,255,255,0.08)"><circle cx="30" cy="50" r="1"/><circle cx="120" cy="220" r="1"/><circle cx="200" cy="90" r="1"/><circle cx="340" cy="150" r="1"/><circle cx="460" cy="40" r="1"/><circle cx="620" cy="300" r="1"/><circle cx="750" cy="200" r="1"/><circle cx="420" cy="430" r="1"/><circle cx="180" cy="370" r="1"/></g></svg>');
+    background-repeat:repeat, repeat, no-repeat, repeat;
+    background-size: auto, auto, cover, 600px 400px;
+    background-attachment: fixed;
+}
+header{padding:18px 40px;background:rgba(0,0,0,0.15);backdrop-filter:blur(6px)}
+.nav-bar{display:flex;align-items:center;gap:20px}
+.nav-icon img{width:48px;height:48px;border-radius:8px}
+.nav-links{display:flex;gap:18px;margin-left:12px}
+.nav-links a{color:#cfe8ef;text-decoration:none;padding:8px 12px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--accent)}
+h1{font-size:32px;margin:28px 0;color:#fff;text-align:center}
+.content{max-width:980px;margin:28px auto 40px;display:flex;flex-direction:column;align-items:center;padding:0 20px}
+.mood-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 24px}
+.mood-buttons button{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#dff6fb;padding:10px 16px;border-radius:999px;cursor:pointer;transition:all .18s}
+.mood-buttons button:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.5);border-color:var(--accent);color:var(--accent)}
+.mood-buttons button:nth-child(1){border-color:#87ceeb;color:#87ceeb}
+.mood-buttons button:nth-child(1):hover{background:rgba(135,206,235,0.15);box-shadow:0 6px 18px rgba(135,206,235,0.4)}
+.mood-buttons button:nth-child(2){border-color:#ffd700;color:#ffd700}
+.mood-buttons button:nth-child(2):hover{background:rgba(255,215,0,0.15);box-shadow:0 6px 18px rgba(255,215,0,0.4)}
+.mood-buttons button:nth-child(3){border-color:#9370db;color:#9370db}
+.mood-buttons button:nth-child(3):hover{background:rgba(147,112,219,0.15);box-shadow:0 6px 18px rgba(147,112,219,0.4)}
+.mood-buttons button:nth-child(4){border-color:#4169e1;color:#4169e1}
+.mood-buttons button:nth-child(4):hover{background:rgba(65,105,225,0.15);box-shadow:0 6px 18px rgba(65,105,225,0.4)}
+.mood-buttons button:nth-child(5){border-color:#ff4500;color:#ff4500}
+.mood-buttons button:nth-child(5):hover{background:rgba(255,69,0,0.15);box-shadow:0 6px 18px rgba(255,69,0,0.4)}
+.mood-buttons button:nth-child(6){border-color:#ff69b4;color:#ff69b4}
+.mood-buttons button:nth-child(6):hover{background:rgba(255,105,180,0.15);box-shadow:0 6px 18px rgba(255,105,180,0.4)}
+.mood-buttons button:nth-child(7){border-color:#00ff7f;color:#00ff7f}
+.mood-buttons button:nth-child(7):hover{background:rgba(0,255,127,0.15);box-shadow:0 6px 18px rgba(0,255,127,0.4)}
+section.playlist{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);margin:18px auto;padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);width:100%;max-width:980px;display:flex;flex-direction:column;align-items:center;text-align:center}
+section.playlist h2{margin:0 0 8px;color:#dff6fb}
+ul{list-style:none;padding:0;margin:0}
+li{padding:10px 12px;margin:6px 0;background:rgba(255,255,255,0.01);border-radius:8px;display:flex;align-items:center;justify-content:center;gap:12px}
+li::before{content:"♫";opacity:.9;color:var(--accent);font-weight:700}
+@media(max-width:600px){header{padding:12px}h1{font-size:22px;margin:16px} .nav-links{display:none}.mood-buttons{margin:0 16px}}
