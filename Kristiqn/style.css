@@ -1,56 +1,69 @@
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    color: #e6f0f2;
+    background-color: #1a3a52; 
+}
+
 header {
-  padding: 20px;
-  display: flex;
-  justify-content: center; 
+    padding: 18px 40px;
+    background: linear-gradient(90deg, #1a3a52 0%, #2a5a8a 60%, #276a9e 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #00ff00; 
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 15px #00000066;
+}
+
+main {
+    min-height: 100vh;
+    background-color: #1a3a52; 
+    background-image: 
+        linear-gradient(90deg, #1a3a52E6 0%, #2a5a8aD9 60%, #276a9eCC 100%),
+        url('lead-singer-455750_1920-1024x682.jpg'),
+        radial-gradient(circle at 10% 20%, #ff00000d 0px, #FFFFFF00 40%);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, cover, auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: normal, soft-light, screen;
 }
 
 .nav-bar {
-  background-color: rgba(95, 89, 89, 0.767);
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 50px;
-  display: flex;      
-  align-items: center; 
-  width: 95%;
-  position: fixed;
- 
-}
-
-.nav-icon {
-  margin-right: auto; 
-  display: flex;     
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
 }
 
 .nav-icon img {
-  height: 45px;       
-  width: auto;   
-  filter: invert(100%);    
+    width: 64px;
+    height: 64px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    border-radius: 8px;
+    filter: invert(100%);
 }
 
-.nav-links {
-  display: flex; 
-  align-items: center;
+.nav-links {   
+    display: flex;
+    gap: 18px;
 }
 
 .nav-links a {
-  color: white;
-  margin-left: 20px;  
-  font-size: 16px;
-  font-family: Arial;
-  text-decoration: none;
-  font-weight: bold;
+    color: #cfe8ef;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all .2s;
 }
 
 .nav-links a:hover {
-  color: rgb(231, 148, 148);
+    background: #FFFFFF1A; 
+    color: #00ff00;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-p{
-  font-size: 200px;
+p {
+    font-size: 200px;
+    margin: 0;
+    padding: 100px 40px;
 }
