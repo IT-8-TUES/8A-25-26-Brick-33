@@ -29,13 +29,13 @@
     <div class="content">
         <h1>Select Your Mood</h1>
         <div class="mood-buttons">
-            <button data-mood="calm">Calm</button>
-            <button data-mood="inspired">Inspired</button>
-            <button data-mood="tired">Tired</button>
-            <button data-mood="sad">Sad</button>
-            <button data-mood="furious">Furious</button>
-            <button data-mood="lonely">Lonely</button>
-            <button data-mood="surprise">Surprise Me</button>
+            <button onclick="showMood('calm')">Calm</button>
+            <button onclick="showMood('inspired')">Inspired</button>
+            <button onclick="showMood('tired')">Tired</button>
+            <button onclick="showMood('sad')">Sad</button>
+            <button onclick="showMood('furious')">Furious</button>
+            <button onclick="showMood('lonely')">Lonely</button>
+            <button onclick="showMood('surprise')">Surprise Me</button>
         </div>
 
         <section class="playlist" id="calm">
@@ -77,7 +77,7 @@
         <section class="playlist" id="furious">
             <h2>Furious Playlist</h2>
             <ul>
-                <li>Furious Song 1</li>
+                <li><a href="https://youtu.be/CD-E-LDc384?si=P25wHjxkbMBgSDQV">Enter Sandman - Metallica</a></li>
                 <li>Furious Song 2</li>
                 <li>Furious Song 3</li>
             </ul>
