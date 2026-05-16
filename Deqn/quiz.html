@@ -2,48 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rock & Metal Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Quiz</title>
     <link rel="stylesheet" href="styleQuiz.css">
 </head>
-
 <body>
-<header><nav class="nav-bar">
-         <a class="nav-icon" href="home.html">
-           <img src="Music-icon.png" alt="Home">
-         </a>
 
+    <nav class="nav-bar">
+        <a class="nav-icon" href="home.html">
+            <img src="Music-icon.png" alt="Home">
+        </a>
         <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="vote.html">Vote</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="quiz_result.html">QuizResult</a>
-        <a href="favourites.html">Favourites</a>
-        <a href="mood.html">Mood</a>
+            <a href="home.html">Home</a>
+            <a href="vote.html">Vote</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="quiz_result.html">QuizResult</a>
+            <a href="favourites.html">Favourites</a>
+            <a href="mood.html">Mood</a>
         </div>
-      </nav></header>
-<h1>Rock & Metal Quiz</h1>
-<p>Test your knowledge of rock and metal music!</p>
-<p>Are you ready to start the quiz? Click the button below.</p>
-<section class="quiz">
-  <button onclick="startQuiz()">Start Quiz</button>
-  <ul>
-    <li>Who is the lead singer of Metallica?</li>
-    <li>Which band has released the album "Issues"?</li>
-    <li>Which band is known for the song "Bohemian Rhapsody"?</li>
-    <li>Which band is known for the song "Enter Sandman"?</li>
-    <li>Which band is known for the song "Smells Like Teen Spirit"?</li> 
-    <li>Which band is known for the song "Smke on the Water"?</li>
-    <li>Which band is known for the song "Paranoid"?</li>
-    <li>Which band is known for the song "Highway to Hell"?</li>
-    <li>Which band is known for the album "Dark Side of the Moon"?</li>
-    <li>Who is the lead singer of System of a Down?</li>
-    <li>Which band is known for the song "Last Resort"?</li>
-    <li>Which band is known for the song "Master of Puppets"?</li>
-   </ul>
-   
-</section>
+    </nav>
 
+    <div class="container">
+        <h1>Music Quiz</h1>
+        <div id="questionContainer" class="text">
+            <p>Question will appear here.</p>
+        </div>
+        <div id="navigation">
+            <button id="prevBtn" disabled>&larr; Previous</button>
+            <button id="nextBtn" disabled>Next &rarr;</button>
+        </div>
+        <div id="result" class="result" style="display:none;"></div>
+    </div>
 
-<footer></footer>
+    <footer></footer>
+
+    <script src="quiz.js"></script>
 </body>
 </html>
