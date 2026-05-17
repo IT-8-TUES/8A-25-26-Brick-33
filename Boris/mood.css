@@ -13,7 +13,7 @@ body{margin:0;font-family:Montserrat, sans-serif;color:#e6f0f2;
 }
 header{padding:18px 40px;background:rgba(0,0,0,0.15);backdrop-filter:blur(6px)}
 .nav-bar{display:flex;align-items:center;gap:20px}
-.nav-icon img{width:48px;height:48px;border-radius:8px}
+.nav-icon img{width:64px;height:64px;border-radius:8px;filter:invert(1)}
 .nav-links{display:flex;gap:18px;margin-left:12px}
 .nav-links a{color:#cfe8ef;text-decoration:none;padding:8px 12px;border-radius:6px;transition:all .2s}
 .nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--accent)}
