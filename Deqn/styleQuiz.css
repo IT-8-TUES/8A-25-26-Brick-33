@@ -11,23 +11,73 @@
 
 body{margin:0;font-family:Montserrat, sans-serif;color:#e6f0f2;
     background-color:#1a3a52;
-    background-image:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.00) 40%),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.00) 60%),
-        linear-gradient(180deg,#1a3a52 0%,#2a5a8a 60%,#3a7aaa 100%),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><g fill="rgba(255,255,255,0.08)"><circle cx="30" cy="50" r="1"/><circle cx="120" cy="220" r="1"/><circle cx="200" cy="90" r="1"/><circle cx="340" cy="150" r="1"/><circle cx="460" cy="40" r="1"/><circle cx="620" cy="300" r="1"/><circle cx="750" cy="200" r="1"/><circle cx="420" cy="430" r="1"/><circle cx="180" cy="370" r="1"/></g></svg>');
-    background-repeat:repeat, repeat, no-repeat, repeat;
+    background-image: 
+        linear-gradient(90deg, #1a3a52E6 0%, #2a5a8aD9 60%, #276a9eCC 100%),
+        url('background.jpg'),  
+        radial-gradient(circle at 10% 20%, #ff00000d 0px, #FFFFFF00 40%);
+        background-repeat:repeat, repeat, no-repeat, repeat;
     background-size: auto, auto, cover, 600px 400px;
     background-attachment: fixed;
+    
+    
 }
 
-header{padding:18px 40px;background:rgba(0,0,0,0.15);backdrop-filter:blur(6px);}
-.nav-bar{display:flex;align-items:center;gap:20px}
-.nav-icon img{width:48px;height:48px;border-radius:8px}
-.nav-links{display:flex;gap:18px;margin-left:12px}
-.nav-links a{color:#cfe8ef;text-decoration:none;padding:8px 12px;border-radius:6px;transition:all .2s}
-.nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--accent)}
-h1{font-size:32px;margin:28px 0;color:#fff;text-align:center}
+header{
+    padding:18px 40px;background:rgba(0,0,0,0.15)
+    ;backdrop-filter:blur(6px);
+      }
+
+
+
+.nav-bar{
+    display:flex;align-items:center;
+    gap:20px;
+        }
+
+
+.nav-icon img
+ {
+    width:48px;
+    height:48px;
+    border-radius:8px
+ }
+
+
+
+.nav-links
+{
+    display:flex;
+    gap:18px;
+    margin-left:12px
+}
+
+
+
+.nav-links a
+{  
+    color:#cfe8ef;
+    text-decoration:none;
+    padding:8px 12px;border-radius:6px;
+    transition:all .2s
+}
+
+
+
+.nav-links a:hover
+{
+    background:rgba(255,255,255,0.04);
+    color:var(--accent)
+}
+h1
+
+
+
+{
+    font-size:32px;
+    margin:28px 0;color:#fff;
+    text-align:center
+}
+
 
 
 .container {
@@ -42,25 +92,6 @@ h1{font-size:32px;margin:28px 0;color:#fff;text-align:center}
     
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    opacity: 0.5;
-    z-index: 0;
-    background-image: url('rockMetal.png');
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 8px;
-}
-
-.container  * {
-    position: relative;
-    z-index: 1;
-}
 
 .text-background {
     background: rgba(255, 255, 255, 0.8);
@@ -78,7 +109,9 @@ h1 {
     text-align: center;
     margin-bottom: 10px;
     color: #222;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: Montserrat, sans-serif;
+
+    
 }
 
 .question {
@@ -136,5 +169,6 @@ button:disabled {
     text-align: center;
     font-weight: bold;
 }
+
 
 
