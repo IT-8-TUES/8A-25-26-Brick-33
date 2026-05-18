@@ -37,9 +37,10 @@ header{
 
 .nav-icon img
  {
-    width:48px;
-    height:48px;
-    border-radius:8px
+    width:64px;
+    height:64px;
+    border-radius:8px;
+    filter:invert(1);
  }
 
 
