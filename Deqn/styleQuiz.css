@@ -37,9 +37,10 @@ header{
 
 .nav-icon img
  {
-    width:48px;
-    height:48px;
-    border-radius:8px
+    width:64px;
+    height:64px;
+    border-radius:8px;
+    filter:invert(1);
  }
 
 
@@ -108,7 +109,7 @@ h1
 h1 {
     text-align: center;
     margin-bottom: 10px;
-    color: #222;
+    color: #e7dbdb;
     font-family: Montserrat, sans-serif;
 
     
@@ -170,5 +171,17 @@ button:disabled {
     font-weight: bold;
 }
 
-
+.quiz-description {
+    font-size: 18px;
+    color: #e3cfcf;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.textbox {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(19, 15, 15, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
 
