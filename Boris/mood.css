@@ -1,7 +1,7 @@
 :root{--accent:#ff3b3b;--bg:#0f1720;--card:#0f2633;--muted:#9aa6b2}
 *{box-sizing:border-box}
 body{margin:0;font-family:Montserrat, sans-serif;color:#e6f0f2;
-    background-color:#1a3a52;
+  background-color:#1a3a52;
     background-image:
         radial-gradient(circle at 10% 20%, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.00) 40%),
         radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.00) 60%),
@@ -10,15 +10,18 @@ body{margin:0;font-family:Montserrat, sans-serif;color:#e6f0f2;
     background-repeat:repeat, repeat, no-repeat, repeat;
     background-size: auto, auto, cover, 600px 400px;
     background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 header{padding:18px 40px;background:rgba(0,0,0,0.15);backdrop-filter:blur(6px)}
 .nav-bar{display:flex;align-items:center;gap:20px}
-.nav-icon img{width:48px;height:48px;border-radius:8px}
+.nav-icon img{width:64px;height:64px;border-radius:8px;filter:invert(1)}
 .nav-links{display:flex;gap:18px;margin-left:12px}
 .nav-links a{color:#cfe8ef;text-decoration:none;padding:8px 12px;border-radius:6px;transition:all .2s}
 .nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--accent)}
 h1{font-size:32px;margin:28px 0;color:#fff;text-align:center}
-.content{max-width:980px;margin:28px auto 40px;display:flex;flex-direction:column;align-items:center;padding:0 20px}
+.content{max-width:980px;margin:28px auto 40px;display:flex;flex-direction:column;align-items:center;padding:0 20px;flex:1}
 .mood-buttons{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 24px}
 .mood-buttons button{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#dff6fb;padding:10px 16px;border-radius:999px;cursor:pointer;transition:all .18s}
 .mood-buttons button:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.5);border-color:var(--accent);color:var(--accent)}
@@ -36,8 +39,27 @@ h1{font-size:32px;margin:28px 0;color:#fff;text-align:center}
 .mood-buttons button:nth-child(6):hover{background:rgba(255,105,180,0.15);box-shadow:0 6px 18px rgba(255,105,180,0.4)}
 .mood-buttons button:nth-child(7){border-color:#00ff7f;color:#00ff7f}
 .mood-buttons button:nth-child(7):hover{background:rgba(0,255,127,0.15);box-shadow:0 6px 18px rgba(0,255,127,0.4)}
-section.playlist{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);margin:18px auto;padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);width:100%;max-width:980px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.playlist a{color:inherit; text-decoration:none}
+section.playlist{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);margin:18px auto;padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);width:100%;max-width:980px;display:none;align-items:center;text-align:center}
 section.playlist h2{margin:0 0 8px;color:#dff6fb}
+footer {
+  background-image:
+    linear-gradient(90deg, #0e212fe6 0%, #1a344ed9 60%, #1a3f5c 100%),
+    url('../Kristiqn/colorful-music-notes-png.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: normal, screen;
+  padding: 40px 20px 20px 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.nav-icon2 img{width:100px; height:100px; filter:invert(100%)}
+.footer-divider{border:0; border-top:1px solid #a12626; width:100%; margin-top:auto; margin-bottom:15px;}
+.copyright{margin:0; text-align:center; font-size:0.85rem; opacity:0.7;}
 ul{list-style:none;padding:0;margin:0}
 li{padding:10px 12px;margin:6px 0;background:rgba(255,255,255,0.01);border-radius:8px;display:flex;align-items:center;justify-content:center;gap:12px}
 li::before{content:"♫";opacity:.9;color:var(--accent);font-weight:700}
