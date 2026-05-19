@@ -24,6 +24,7 @@ main {
 
 .main-section {
     min-height: 100vh;
+    padding-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +39,6 @@ main {
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: cover, cover,cover, cover, auto;
     background-position: center;
-    background-attachment: fixed;
     background-blend-mode: normal, screen, soft-light, multiply, screen;
 }
 
@@ -79,11 +79,11 @@ main {
     color: #ff3b3b;
 }
 
-.Title-sign{
+.title-sign{
     margin:0px;
     text-align: center;
     font-size: 120px;
-    padding: 220px 1px;
+    color: #cfe8ef;
     font-weight: bold;
 }
 
@@ -104,7 +104,7 @@ main {
     position: relative;       
 }
 
-h1{
+.title-text{
     margin-top: 90px;
     color:#363434;
     text-align: center;
@@ -125,7 +125,8 @@ h1{
 
 .img1 {
     width: 450px;
-    height: 300px;          
+    height: 300px;      
+    box-shadow: 0 4px 15px #00000066;    
 
 }
 
@@ -148,7 +149,7 @@ h1{
 
 }
 
-h3 {
+.content-text{
     color: #6c6767;   
     line-height: 1.5;
     margin: 0;
@@ -187,12 +188,14 @@ h3 {
 
 .title{
     font-size: 42px;
+    color: #363434;     
    
 }
 
 .img2{
     width: 450px;
     height: 600px;
+    box-shadow: 0 4px 15px #00000066;
 }
 
 .links-container{
@@ -227,7 +230,6 @@ footer {
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center;
-    background-attachment: fixed;
     background-blend-mode: normal, screen;
   padding: 40px 20px 20px 20px;
   min-height: 150px;
@@ -257,3 +259,128 @@ footer {
     filter: invert(100%);
 }
 
+/*votecss*/
+
+.main-section-vote{
+    min-height: 50vh;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a3a52; 
+    background-image: 
+        linear-gradient(90deg, #1a3a52E6 0%, #2a5a8aD9 60%, #276a9eCC 100%),
+        url('8a36bce8e97f441f79f508fd5242f0ba.jpg'),
+        radial-gradient(circle at 10% 20%, #ff00000d 0px, #FFFFFF00 40%);
+        
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: cover, cover, auto;
+    background-position: center;
+    background-blend-mode: normal, screen, screen;
+}
+
+
+.title-vote{
+   color: #cfe8ef;
+   font-weight: bold;
+   font-size: 85px;
+   margin:0px;
+   text-align: center;
+}
+
+.vote-info-text{
+   
+    margin: auto;
+    border-radius: 20px;
+    font-size: 25px;
+    color:#363434;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1000px;
+    margin-bottom: 40px;
+}
+
+.song-img1{
+    width: 450px;
+    height: 450px;      
+    box-shadow: 0 4px 15px #00000066;    
+    border-radius: 30px;
+}
+
+#popup{
+  border: none;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 20px #00000026;
+  align-items: center;  
+  gap: 24px;            
+  text-align: center;           
+}
+#popup::backdrop {
+  background-color: #00000080;
+  backdrop-filter: blur(4px); 
+}
+
+#openBtn {
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;  
+  background: linear-gradient(90deg, #a12626 0%, #b72a2a 60%, #ff3b3b 100%);
+  color: #cfe8ef;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  font-size: 20px;
+  box-shadow: 0 4px 15px #00000066;
+
+}
+
+
+#openBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px #ff3b3b66;
+}
+
+#closeBtn {
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(90deg, #1a3a52E6 0%, #2a5a8aD9 60%, #276a9eCC 100%);
+  color: #cfe8ef;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  font-size: 20px;
+  box-shadow: 0 4px 15px #00000066;
+  border-radius: 40px;
+}
+
+#closeBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px #00d2ff66;
+}
+
+.vote-info-popup{
+    font-size: 20px;
+    padding: 34px;
+    color:#363434;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1000px;
+    margin: 0;
+}
+
+.vote-info-div{
+    background-color: #faf6ec;
+    border-radius: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

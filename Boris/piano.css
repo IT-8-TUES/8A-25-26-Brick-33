@@ -1,0 +1,185 @@
+:root {
+    --accent: #ff3b3b;
+    --bg: #0f1720;
+    --card: #0f2633;
+    --muted: #9aa6b2
+}
+* {
+    box-sizing: border-box
+}
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    color: #e6f0f2;
+    background-color: #1a3a52;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.00) 40%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06) 0px, rgba(255, 255, 255, 0.00) 60%),
+        linear-gradient(180deg, #1a3a52 0%, #2a5a8a 60%, #3a7aaa 100%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><g fill="rgba(255,255,255,0.08)"><circle cx="30" cy="50" r="1"/><circle cx="120" cy="220" r="1"/><circle cx="200" cy="90" r="1"/><circle cx="340" cy="150" r="1"/><circle cx="460" cy="40" r="1"/><circle cx="620" cy="300" r="1"/><circle cx="750" cy="200" r="1"/><circle cx="420" cy="430" r="1"/><circle cx="180" cy="370" r="1"/></g></svg>');
+    background-repeat: repeat, repeat, no-repeat, repeat;
+    background-size: auto, auto, cover, 600px 400px;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    padding: 18px 40px;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px)
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+.nav-icon img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    filter: invert(1)
+}
+.nav-links {
+    display: flex;
+    gap: 18px;
+    margin-left: 12px
+}
+.nav-links a {
+    color: #cfe8ef;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all .2s
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--accent)
+}
+h1 {
+    font-size: 32px;
+    margin: 28px 0;
+    color: #fff;
+    text-align: center
+}
+.content {
+    max-width: 980px;
+    margin: 28px auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+}
+.piano-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 30vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+.piano {
+    display: flex;
+    gap: 4px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.piano-key {
+    flex: 1;
+    background: white;
+    border: 1px solid #333;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+    user-select: none;
+    transition: all 0.05s;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.piano-key.white {
+    background: white;
+    color: #333;
+}
+.piano-key.black {
+    background: #1a1a1a;
+    color: white;
+    width: 0.6em;
+    margin-left: -0.3em;
+    margin-right: -0.3em;
+    z-index: 10;
+    border-radius: 0 0 4px 4px;
+}
+.piano-key:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.piano-key.active {
+    background: rgba(100, 150, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(100, 150, 255, 0.3);
+}
+.piano-key.black.active {
+    background: rgba(100, 150, 255, 0.6);
+}
+.key-label {
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+footer {
+    background-image:
+        linear-gradient(90deg, #0e212fe6 0%, #1a344ed9 60%, #1a3f5c 100%),
+        url('../Kristiqn/colorful-music-notes-png.png');
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: normal, screen;
+    padding: 40px 20px 20px 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-icon2 img {
+    width: 100px;
+    height: 100px;
+    filter: invert(100%)
+}
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #a12626;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.copyright {
+    margin: 0;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+@media(max-width:600px) {
+    header {
+        padding: 12px
+    }
+    h1 {
+        font-size: 22px;
+        margin: 16px
+    }
+    .nav-links {
+        display: none
+    }
+    .piano-container {
+        width: 95%;
+        height: 40%;
+    }
+}
