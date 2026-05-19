@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Who is the lead singer of System of a Down?",
+        question: "1. Who is the lead singer of System of a Down?",
         options: [
             { text: "Serj Tankian", value: "A" },
             { text: "Daron Malakian", value: "B" },
