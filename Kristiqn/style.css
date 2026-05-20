@@ -154,6 +154,8 @@ main {
     line-height: 1.5;
     margin: 0;
     text-align: center;   
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
 }
 
 .main-content-link {
@@ -247,6 +249,7 @@ footer {
 }
 
 .copyright {
+  font-family: "Roboto Condensed", sans-serif;  
   margin: 0;
   text-align: center;
   font-size: 0.85rem;
@@ -289,7 +292,7 @@ footer {
 }
 
 .vote-info-text{
-   
+    font-family: "Roboto Condensed", sans-serif;
     margin: auto;
     border-radius: 20px;
     font-size: 25px;
@@ -316,11 +319,26 @@ footer {
   box-shadow: 0 4px 20px #00000026;
   align-items: center;  
   gap: 24px;            
-  text-align: center;           
+  text-align: center;     
+  
 }
 #popup::backdrop {
   background-color: #00000080;
   backdrop-filter: blur(4px); 
+}
+
+#popup[open] {
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.2); 
+  }
+  to {
+    transform: scale(1);           
+  }
 }
 
 #openBtn {
@@ -371,6 +389,7 @@ footer {
     line-height: 1.5;
     max-width: 1000px;
     margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .vote-info-div{
@@ -428,4 +447,50 @@ footer {
     font-size: 20px;
     font-weight: bold;
    
+}
+
+.album-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+    margin-bottom: 35px;
+}
+
+.record-link {
+    position: absolute;
+    bottom: -25px;          
+    right: -25px;         
+    width: 100px; 
+    height: 100px; 
+    background: radial-gradient(circle at center, #7a7a7a 0%, #3a3a3a 45%, #111111 100%);
+    border-radius: 50%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.25s ease;
+    z-index: 10;           
+}
+
+.record-icon{
+    width: 80px; 
+    height: 80px;
+    object-fit: contain; 
+    
+}
+
+
+.record-link:hover {
+    transform: scale(1.12);       
+    animation: spinRecord 1.3s linear infinite;
+}
+
+
+@keyframes spinRecord {
+    from {
+        transform: scale(1.05) rotate(0deg); 
+    }
+    to {
+        transform: scale(1.05) rotate(360deg);
+    }
 }
