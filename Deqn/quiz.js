@@ -20,14 +20,14 @@ const questions = [
         correct: "B"
     },
     {
-        question: "3. Who is the famous mascot of the heavy metal band Iron Maiden?",
+        question: "3. Which band released the iconic album 'Follow the Leader' ?",
         options: [
-            { text: "Vic Rattlehead", value: "A" },
-            { text: "Murray", value: "B" },
-            { text: "Eddie", value: "C" },
-            { text: "The Guy", value: "D" }
+            { text: "Korn", value: "A" },
+            { text: "Slipknot", value: "B" },
+            { text: "System of a Down", value: "C" },
+            { text: "Deftones", value: "D" }
         ],
-        correct: "C"
+        correct: "A"
     },
     {
         question: "4. What was the name of Metallica's debut studio album released in 1983?",
@@ -40,29 +40,29 @@ const questions = [
         correct: "C"
     },
     {
-        question: "5. Which alternative rock band released the diamond-certified album 'Nevermind' in 1991?",
+        question: "5. Which band released the album 'Dirt' in 1992, featuring the hit single 'Would?'?",
         options: [
-            { text: "Pearl Jam", value: "A" },
-            { text: "Soundgarden", value: "B" },
-            { text: "Alice in Chains", value: "C" },
-            { text: "Nirvana", value: "D" }
+            { text: "NIrvana", value: "A" },
+            { text: "Alice in Chains", value: "B" },
+            { text: "Pearl Jam", value: "C" },
+            { text: "Soundgarden", value: "D" }
+        ],
+        correct: "B"
+    },
+    {
+        question: "6. Who is the singer of the metal band Megadeth?",
+        options: [
+            { text: "Jonathan Davis", value: "A" },
+            { text: "James Hetfield", value: "B" },
+            { text: "Jon Bon Jovi", value: "C" },
+            { text: "Dave Mustaine", value: "D" }
         ],
         correct: "D"
     },
     {
-        question: "6. Who is the lead guitarist of the hard rock band Guns N' Roses?",
-        options: [
-            { text: "Slash", value: "A" },
-            { text: "Brian May", value: "B" },
-            { text: "Kirk Hammett", value: "C" },
-            { text: "Angus Young", value: "D" }
-        ],
-        correct: "A"
-    },
-    {
         question: "7. Which metal band features members performing in matching jumpsuits and unique horror-themed masks?",
         options: [
-            { text: "Mushroomhead", value: "A" },
+            { text: "Metallica", value: "A" },
             { text: "Slipknot", value: "B" },
             { text: "Mudvayne", value: "C" },
             { text: "GWAR", value: "D" }
@@ -90,12 +90,12 @@ const questions = [
         correct: "A"
     },
     {
-        question: "10. Who is the lead vocalist and primary lyricist for the metal band Tool?",
+        question: "10.From which Metallica album is the famous song 'Nothing Else Matters'?",
         options: [
-            { text: "Chino Moreno", value: "A" },
-            { text: "Maynard James Keenan", value: "B" },
-            { text: "Jonathan Davis", value: "C" },
-            { text: "Trent Reznor", value: "D" }
+            { text: "Ride the Lightning", value: "A" },
+            { text: "The Black Album", value: "B" },
+            { text: "Kill 'Em All", value: "C" },
+            { text: "And Justice for All", value: "D" }
         ],
         correct: "B"
     },
@@ -130,32 +130,32 @@ const questions = [
         correct: "C"
     },
     {
-        question: "14. What is the title of Avenged Sevenfold's 2005 breakthrough album featuring 'Bat Country'?",
+        question: "14. Which rock band released the album 'Perfect Strangers' ?",
         options: [
-            { text: "City of Evil", value: "A" },
-            { text: "Waking the Fallen", value: "B" },
-            { text: "Nightmare", value: "C" },
-            { text: "Hail to the King", value: "D" }
+            { text: "Deep Purple", value: "A" },
+            { text: "Rainbow", value: "B" },
+            { text: "Black Sabbath", value: "C" },
+            { text: "Led Zeppelin", value: "D" }
         ],
         correct: "A"
     },
     {
-        question: "15. Who was the iconic bassist and frontman of the hard rock band Motörhead?",
+        question: "15. Who was the creator of the rock band 'Rainbow' and also a former guitarist of Deep Purple?",
         options: [
-            { text: "Geezer Butler", value: "A" },
-            { text: "Lemmy Kilmister", value: "B" },
-            { text: "Cliff Burton", value: "C" },
-            { text: "Steve Harris", value: "D" }
+            { text: "Ronnie James Dio", value: "A" },
+            { text: "Tony Iommi", value: "B" },
+            { text: "Ritchie Blackmore", value: "C" },
+            { text: "David Gilmour", value: "D" }
         ],
-        correct: "B"
+        correct: "C"
     },
     {
-        question: "16. Which industrial rock band is driven by sole official member Trent Reznor?",
+        question: "16. Which progressive metal band is known for the album 'Scream Bloody Gore'?",
         options: [
-            { text: "Rammstein", value: "A" },
-            { text: "Ministry", value: "B" },
-            { text: "Marilyn Manson", value: "C" },
-            { text: "Nine Inch Nails", value: "D" }
+            { text: "Pantera", value: "A" },
+            { text: "Cannibal Corpse", value: "B" },
+            { text: "Morbid Angel", value: "C" },
+            { text: "Death", value: "D" }
         ],
         correct: "D"
     }
@@ -183,15 +183,14 @@ function showQuestion(index) {
     `;
 
     const radios = container.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            answers[index] = radio.value;
-            document.getElementById('nextBtn').disabled = false;
-        });
+   radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+        answers[index] = radio.value;
     });
+});
 
     document.getElementById('prevBtn').disabled = index === 0;
-    document.getElementById('nextBtn').disabled = !answers[index];
+    document.getElementById('nextBtn').disabled = false;
 
     if (index === questions.length - 1) {
         document.getElementById('nextBtn').textContent = 'Submit';
@@ -223,14 +222,63 @@ function checkAnswers() {
     });
 
     
-    const result = document.getElementById('result');
-    result.style.display = 'block';
-    result.textContent = 'You scored ' + score + ' out of ' + questions.length + '.';
-    document.getElementById('questionContainer').style.display = 'none';
-    document.getElementById('navigation').style.display = 'none';
+   
 
   
 }
 
 
 showQuestion(0);
+
+
+function checkAnswers() {
+    let score = 0;
+    let resultsHTML = `<h2>You scored ${score} out of ${questions.length}</h2>`;
+
+    resultsHTML = '';
+
+    questions.forEach((q, i) => {
+
+        const correctOption = q.options.find(opt => opt.value === q.correct);
+        const userOption = q.options.find(opt => opt.value === answers[i]);
+
+        const isCorrect = answers[i] === q.correct;
+
+        if (isCorrect) score++;
+
+        resultsHTML += `
+            <div class="result-question ${isCorrect ? 'correct' : 'wrong'}">
+                <h3>${q.question}</h3>
+
+                <p>
+                    Your answer:
+                    <strong>
+                        ${userOption ? userOption.text : 'No answer'}
+                    </strong>
+                </p>
+
+                <p>
+                    Correct answer:
+                    <strong>${correctOption.text}</strong>
+                </p>
+
+                <p class="status">
+                    ${isCorrect ? '✅ Correct' : '❌ Wrong'}
+                </p>
+            </div>
+            <hr>
+        `;
+    });
+
+    const result = document.getElementById('result');
+
+    result.style.display = 'block';
+
+    result.innerHTML = `
+        <h1>Your Score: ${score} / ${questions.length}</h1>
+        ${resultsHTML}
+    `;
+
+    document.getElementById('questionContainer').style.display = 'none';
+    document.getElementById('navigation').style.display = 'none';
+}
