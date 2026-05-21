@@ -4,7 +4,7 @@ const questions = [
         options: [
             { text: "Serj Tankian", value: "A" },
             { text: "Daron Malakian", value: "B" },
-            { text: "Kirt Cobain", value: "C" },
+            { text: "Kurt Cobain", value: "C" },
             { text: "John Lennon", value: "D" }
         ],
         correct: "A"
