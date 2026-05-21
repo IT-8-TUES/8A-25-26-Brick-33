@@ -342,7 +342,6 @@ li::before {
   }
 }
 
-/* Song items with buttons */
 .song-item {
   display: flex !important;
   align-items: center;
@@ -435,7 +434,6 @@ li::before {
   background: transparent;
 }
 
-/* Notification styling */
 #notification {
   position: fixed;
   top: 100px;

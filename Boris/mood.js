@@ -1,4 +1,3 @@
-// Show/hide mood playlists
 function showMood(id){
     const playlists = document.querySelectorAll('.playlist');
     playlists.forEach(p=>p.style.display='none');
@@ -7,24 +6,20 @@ function showMood(id){
     updateAllButtons();
 }
 
-// Get favourites from localStorage
 function getFavourites(){
     const fav = localStorage.getItem('favourites');
     return fav ? JSON.parse(fav) : [];
 }
 
-// Save favourites to localStorage
 function saveFavourites(favourites){
     localStorage.setItem('favourites', JSON.stringify(favourites));
 }
 
-// Check if a song is in favourites
 function isSongFavourite(title, url){
     const favourites = getFavourites();
     return favourites.some(song => song.title === title && song.url === url);
 }
 
-// Add song to favourites
 function addToFavourites(title, url){
     const favourites = getFavourites();
     
@@ -45,7 +40,6 @@ function addToFavourites(title, url){
     return true;
 }
 
-// Remove song from favourites
 function removeFromFavourites(title, url){
     const favourites = getFavourites();
     const index = favourites.findIndex(song => song.title === title && song.url === url);
@@ -62,7 +56,6 @@ function removeFromFavourites(title, url){
     return true;
 }
 
-// Show notification
 function showNotification(message, type = 'success'){
     let notif = document.getElementById('notification');
     
@@ -81,7 +74,6 @@ function showNotification(message, type = 'success'){
     }, 3000);
 }
 
-// Update all song buttons to reflect favourite status
 function updateAllButtons(){
     const favourites = getFavourites();
     const isFull = favourites.length >= 5;
@@ -97,7 +89,6 @@ function updateAllButtons(){
         
         const isFav = isSongFavourite(title, url);
         
-        // Update remove button
         if(isFav){
             removeBtn.classList.remove('disabled');
             removeBtn.style.opacity = '1';
@@ -108,7 +99,6 @@ function updateAllButtons(){
             removeBtn.style.cursor = 'not-allowed';
         }
         
-        // Update add button
         if(isFav){
             addBtn.classList.add('disabled');
             addBtn.style.opacity = '0.3';
@@ -125,7 +115,6 @@ function updateAllButtons(){
     });
 }
 
-// Initialize buttons on page load
 document.addEventListener('DOMContentLoaded', function(){
     updateAllButtons();
 });
