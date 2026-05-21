@@ -24,11 +24,18 @@
         <a href="../Deqn/quiz_result.html">QuizResult</a>
         <a href="favourites.html">Favourites</a>
         <a href="mood.html">Mood</a>
+        <a href="piano.html">Piano</a>
         </div>
       </nav>
     </header>
-    <div class="content">
-        <h1>Select Your Mood</h1>
+    <main>
+      <section class="main-section">
+        <p class="title-mood">SELECT YOUR MOOD</p>
+      </section>
+    
+      <section class="section1">
+        <div class="content">
+          <h1>Select Your Mood</h1>
         <div class="mood-buttons">
             <button onclick="showMood('calm')">Calm</button>
             <button onclick="showMood('inspired')">Inspired</button>
@@ -42,66 +49,326 @@
         <section class="playlist" id="calm">
             <h2>Calm Playlist</h2>
             <ul>
-                <li><a href="https://youtu.be/DmmYAX8Phig?si=bLVxABe-lf_dEEEh">Radio/Video - System Of A Down</a></li>
-                <li><a href="https://youtu.be/VAWjsVoDpm0?si=4eRtB-QKxkKPao1_">Got The Life - Korn</a></li>
-                <li>Calm Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/DmmYAX8Phig?si=bLVxABe-lf_dEEEh">Radio/Video - System Of A Down</a>
+                    </div>
+                    <div class="song-button-group" data-title="Radio/Video - System Of A Down" data-url="https://youtu.be/DmmYAX8Phig?si=bLVxABe-lf_dEEEh">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/VAWjsVoDpm0?si=4eRtB-QKxkKPao1_">Got The Life - Korn</a>
+                    </div>
+                    <div class="song-button-group" data-title="Got The Life - Korn" data-url="https://youtu.be/VAWjsVoDpm0?si=4eRtB-QKxkKPao1_">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/tAGnKpE4NCI?si=c9fpRU_T7RrRsRxO">Nothing Else Matters - Metallica</a>
+                    </div>
+                    <div class="song-button-group" data-title="Nothing Else Matters - Metallica" data-url="https://youtu.be/tAGnKpE4NCI?si=c9fpRU_T7RrRsRxO">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Calm Song 4</div>
+                    <div class="song-button-group" data-title="Calm Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Calm Song 5</div>
+                    <div class="song-button-group" data-title="Calm Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="inspired">
             <h2>Inspired Playlist</h2>
             <ul>
-                <li>Inspired Song 1</li>
-                <li>Inspired Song 2</li>
-                <li>Inspired Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">Inspired Song 1</div>
+                    <div class="song-button-group" data-title="Inspired Song 1" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Inspired Song 2</div>
+                    <div class="song-button-group" data-title="Inspired Song 2" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Inspired Song 3</div>
+                    <div class="song-button-group" data-title="Inspired Song 3" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Inspired Song 4</div>
+                    <div class="song-button-group" data-title="Inspired Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Inspired Song 5</div>
+                    <div class="song-button-group" data-title="Inspired Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="tired">
             <h2>Tired Playlist</h2>
             <ul>
-                <li>Tired Song 1</li>
-                <li>Tired Song 2</li>
-                <li>Tired Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/WPpDyIJdasg?si=XOmY49MfATnMkwgp">Change (In the House of Flies) - Deftones</a>
+                    </div>
+                    <div class="song-button-group" data-title="Change (In the House of Flies) - Deftones" data-url="https://youtu.be/WPpDyIJdasg?si=XOmY49MfATnMkwgp">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Tired Song 2</div>
+                    <div class="song-button-group" data-title="Tired Song 2" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Tired Song 3</div>
+                    <div class="song-button-group" data-title="Tired Song 3" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Tired Song 4</div>
+                    <div class="song-button-group" data-title="Tired Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Tired Song 5</div>
+                    <div class="song-button-group" data-title="Tired Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="sad">
             <h2>Sad Playlist</h2>
             <ul>
-                 <li><a href="https://youtu.be/mna8mZP9eSg?si=CmYcT_b5ddSi6CKY">Lost In Hollywood - System Of A Down</a></li>
-                <li>Sad Song 2</li>
-                <li>Sad Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/mna8mZP9eSg?si=CmYcT_b5ddSi6CKY">Lost In Hollywood - System Of A Down</a>
+                    </div>
+                    <div class="song-button-group" data-title="Lost In Hollywood - System Of A Down" data-url="https://youtu.be/mna8mZP9eSg?si=CmYcT_b5ddSi6CKY">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/LXEKuttVRIo?si=sxlvO7o9vg64ZZEc">Snuff - Slipknot</a>
+                    </div>
+                    <div class="song-button-group" data-title="Snuff - Slipknot" data-url="https://youtu.be/LXEKuttVRIo?si=sxlvO7o9vg64ZZEc">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/CAiHbBgDpS4?si=IyCk8x9dOy9Qdxqm">Tearjerker - Korn</a>
+                    </div>
+                    <div class="song-button-group" data-title="Tearjerker - Korn" data-url="https://youtu.be/CAiHbBgDpS4?si=IyCk8x9dOy9Qdxqm">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Sad Song 4</div>
+                    <div class="song-button-group" data-title="Sad Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Sad Song 5</div>
+                    <div class="song-button-group" data-title="Sad Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="furious">
             <h2>Furious Playlist</h2>
             <ul>
-                <li><a href="https://youtu.be/5vBGOrI6yBk?si=-s7jVB431X-W7Yp9">Sugar - System Of A Down</a></li>
-                 <li><a href="https://youtu.be/YIqbdnaPcT8?si=ffE_TcTQThJFwpD5">Dig - Mudvayne</a></li>
-                <li>Furious Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/5vBGOrI6yBk?si=-s7jVB431X-W7Yp9">Sugar - System Of A Down</a>
+                    </div>
+                    <div class="song-button-group" data-title="Sugar - System Of A Down" data-url="https://youtu.be/5vBGOrI6yBk?si=-s7jVB431X-W7Yp9">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/YIqbdnaPcT8?si=ffE_TcTQThJFwpD5">Dig - Mudvayne</a>
+                    </div>
+                    <div class="song-button-group" data-title="Dig - Mudvayne" data-url="https://youtu.be/YIqbdnaPcT8?si=ffE_TcTQThJFwpD5">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/ZpUYjpKg9KY?si=PBTkQI4yNp6b181x">Break Stuff - Limp Bizkit</a>
+                    </div>
+                    <div class="song-button-group" data-title="Break Stuff - Limp Bizkit" data-url="https://youtu.be/ZpUYjpKg9KY?si=PBTkQI4yNp6b181x">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Furious Song 4</div>
+                    <div class="song-button-group" data-title="Furious Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Furious Song 5</div>
+                    <div class="song-button-group" data-title="Furious Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="lonely">
             <h2>Lonely Playlist</h2>
             <ul>
-                <li><a href="https://youtu.be/DnGdoEa1tPg?si=K54XsWQsldbj88qr">Lonely Day - System Of A Down</a></li>
-                <li>Lonely Song 2</li>
-                <li>Lonely Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/DnGdoEa1tPg?si=K54XsWQsldbj88qr">Lonely Day - System Of A Down</a>
+                    </div>
+                    <div class="song-button-group" data-title="Lonely Day - System Of A Down" data-url="https://youtu.be/DnGdoEa1tPg?si=K54XsWQsldbj88qr">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/XFkzRNyygfk?si=HsEcVo2G9AEuRwGS">Creep - Radiohead</a>
+                    </div>
+                    <div class="song-button-group" data-title="Creep - Radiohead" data-url="https://youtu.be/XFkzRNyygfk?si=HsEcVo2G9AEuRwGS">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Lonely Song 3</div>
+                    <div class="song-button-group" data-title="Lonely Song 3" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Lonely Song 4</div>
+                    <div class="song-button-group" data-title="Lonely Song 4" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">Lonely Song 5</div>
+                    <div class="song-button-group" data-title="Lonely Song 5" data-url="">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
 
         <section class="playlist" id="surprise">
             <h2>Surprise Me Playlist</h2>
             <ul>
-                <li>Surprise Song 1</li>
-                <li>Surprise Song 2</li>
-                <li>Surprise Song 3</li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/nspxAG12Cpc?si=SJLKy_7uNo4xqTUH">Sober - Tool</a>
+                    </div>
+                    <div class="song-button-group" data-title="Sober - Tool" data-url="https://youtu.be/nspxAG12Cpc?si=SJLKy_7uNo4xqTUH">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/Ps0MfBG5-Uo?si=1nI85WPNy_SJHWcx">Push It - Static-X</a>
+                    </div>
+                    <div class="song-button-group" data-title="Push It - Static-X" data-url="https://youtu.be/Ps0MfBG5-Uo?si=1nI85WPNy_SJHWcx">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/AkFqg5wAuFk?si=JtHIJIQdoYbsFJyA">Walk - Pantera</a>
+                    </div>
+                    <div class="song-button-group" data-title="Walk - Pantera" data-url="https://youtu.be/AkFqg5wAuFk?si=JtHIJIQdoYbsFJyA">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/bWXazVhlyxQ?si=hVSfK45u4Jj1n5K0">Killing In The Name - Rage Against The Machine</a>
+                    </div>
+                    <div class="song-button-group" data-title="Killing In The Name - Rage Against The Machine" data-url="https://youtu.be/bWXazVhlyxQ?si=hVSfK45u4Jj1n5K0">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
+                <li class="song-item">
+                    <div class="song-content">
+                        <a href="https://youtu.be/LNCkKgJ7Aws?si=uAoiWJBg0LNopRkN">Snot - Snot</a>
+                    </div>
+                    <div class="song-button-group" data-title="Snot - Snot" data-url="https://youtu.be/LNCkKgJ7Aws?si=uAoiWJBg0LNopRkN">
+                        <button class="song-btn add-btn" onclick="addToFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Add to favourites">+</button>
+                        <button class="song-btn remove-btn disabled" onclick="removeFromFavourites(this.parentElement.getAttribute('data-title'), this.parentElement.getAttribute('data-url'))" title="Remove from favourites">🗑</button>
+                    </div>
+                </li>
             </ul>
         </section>
-    </div>
+        </div>
+      </section>
+    </main>
     <script src="mood.js"></script>
 <footer>
   <a class="nav-icon2" href="../Kristiqn/home.html">

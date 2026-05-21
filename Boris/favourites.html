@@ -20,22 +20,28 @@
         <a href="../Deqn/quiz_result.html">QuizResult</a>
         <a href="favourites.html">Favourites</a>
         <a href="mood.html">Mood</a>
+        <a href="piano.html">Piano</a>
         </div>
       </nav>
     </header>
-    <div class="content">
-        <h1>My Favorite Songs</h1>
+    <main>
+      <section class="main-section">
+        <p class="title-favourites">MY FAVORITES</p>
+      </section>
+    
+      <section class="section1">
+        <div class="content">
+          <h1>My Favorite Songs</h1>
         <section class="playlist" style="display:block;">
             <h2>Favorite Playlist</h2>
-            <ul>
-                <li><a href="https://youtu.be/CD-E-LDc384?si=P25wHjxkbMBgSDQV">Enter Sandman - Metallica</a></li>
-                <li><a href="https://youtu.be/kXYiU_JCYtU">Numb - Linkin Park</a></li>
-                <li><a href="https://youtu.be/3AtDnEC4zak">Use Somebody - Kings of Leon</a></li>
-                <li><a href="https://youtu.be/ktvTqknDobU">Radioactive - Imagine Dragons</a></li>
-                <li><a href="https://youtu.be/2vjPBrBU-TM">Chandelier - Sia</a></li>
+            <ul id="favourites-list">
+                <!-- Dynamically populated from localStorage -->
             </ul>
+            <p id="empty-message" style="text-align: center; color: #cfe8ef; font-size: 16px;">No favourite songs yet. Add some from the Mood page!</p>
         </section>
-    </div>
+        </div>
+      </section>
+    </main>
     <footer>
   <a class="nav-icon2" href="../Kristiqn/home.html">
     <img src="../Kristiqn/music-icon-for-your-website-mobile-presentation-and-logo-design-free-vector-removebg-preview.png" alt="Home">
@@ -44,5 +50,56 @@
   <hr class="footer-divider">
   <p class="copyright">&copy; 2026 Your Music. All rights reserved.</p>
 </footer>
+<script src="mood.js"></script>
+<script>
+// Load and display favourites on page load
+function loadFavourites(){
+    const favourites = getFavourites();
+    const list = document.getElementById('favourites-list');
+    const emptyMessage = document.getElementById('empty-message');
+    
+    list.innerHTML = '';
+    
+    if(favourites.length === 0){
+        emptyMessage.style.display = 'block';
+    } else {
+        emptyMessage.style.display = 'none';
+        favourites.forEach((song, index) => {
+            const li = document.createElement('li');
+            li.className = 'song-item fav-item';
+            
+            let songContent = '';
+            if(song.url){
+                songContent = `<a href="${song.url}" target="_blank">${song.title}</a>`;
+            } else {
+                songContent = song.title;
+            }
+            
+            li.innerHTML = `
+                <div class="song-content">
+                    ${songContent}
+                </div>
+                <button class="song-btn remove-btn" onclick="removeFavouriteFromFavourites(${index})" title="Remove from favourites">🗑</button>
+            `;
+            
+            list.appendChild(li);
+        });
+    }
+}
+
+// Remove from favourites (called from favourites page)
+function removeFavouriteFromFavourites(index){
+    const favourites = getFavourites();
+    if(index >= 0 && index < favourites.length){
+        const song = favourites[index];
+        favourites.splice(index, 1);
+        saveFavourites(favourites);
+        showNotification('✓ Song removed from favourites', 'success');
+        loadFavourites();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadFavourites);
+</script>
 </body>
 </html>
