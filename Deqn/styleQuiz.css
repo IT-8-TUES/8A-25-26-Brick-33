@@ -374,112 +374,115 @@ footer {
 }
 
 .first-result{
-    max-width: 600px;
-    margin: 20px auto;
-    background-image:linear-gradient(90deg, #d4a332 0%, #18885d 60%, #a52875 100%);
-    border-radius: 60px;
-    padding: 30px;
-    position: relative;
-    left: 200px;
-    
-    
-}
-
-.second-result{
-    max-width: 600px;
-    margin: 20px auto;
-   background-image:linear-gradient(90deg, #d4a332 0%, #18885d 60%, #a52875 100%);
-    border-radius: 60px;
-    padding: 30px;
+    color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 35px;
     position: relative;
     right: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('quiz-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+}
+
+
+
+.second-result{
+        color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 35px;
+    position: relative;
+    left: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('quiz-image2.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  
 }
 
 .third-result{
-    max-width: 600px;
-    margin: 20px auto;
-    background-image:linear-gradient(90deg, #d4a332 0%, #18885d 60%, #a52875 100%);
-    border-radius: 60px;
-    padding: 30px;
-    position: relative;
-    left: 200px;
-}
-.fourth-result{
-    max-width: 600px;
-    margin: 20px auto;
-    background-image:linear-gradient(90deg, #d4a332 0%, #18885d 60%, #a52875 100%);
-    border-radius: 60px;
-    padding: 30px;
+        color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 35px;
     position: relative;
     right: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('quiz-image3.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
-.fifth-result{
-    max-width: 600px;
-    margin: 20px auto;
-    background-image:linear-gradient(90deg, #d4a332 0%, #18885d 60%, #a52875 100%);
-    border-radius: 60px;
-    padding: 30px;
+.fourth-result{
+       color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 35px;
     position: relative;
     left: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('quiz-image4.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
-
-.ResultImage1 {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: 3px solid #603737;
+.fifth-result{
+        color: white;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 35px;
     position: relative;
-    left: 300px;
-    bottom: 200px;
+    right: 200px;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url('quiz-image5.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 
-
-.ResultImage2 {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: 3px solid #603737;
-    position: relative;
-    right: 300px;
-    bottom: 200px;
-}
-
-.ResultImage3 {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: 3px solid #603737;
-    position: relative;
-    left: 300px;
-    bottom: 200px;
-}
-
-.ResultImage4 {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: 3px solid #603737;
-    position: relative;
-    right: 300px;
-    bottom: 200px;
-}
-
-.ResultImage5 {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: 3px solid #603737;
-    position: relative;
-    left: 300px;
-    bottom: 200px;
-}

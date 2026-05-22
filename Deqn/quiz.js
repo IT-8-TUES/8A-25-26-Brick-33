@@ -158,7 +158,54 @@ const questions = [
             { text: "Death", value: "D" }
         ],
         correct: "D"
-    }
+    },
+
+    {
+        question: "17. Which bandd released the hit song 'Sultans of Swing' in 1978?",
+        options: [
+            { text: "Dire Straits", value: "A" },
+            { text: "The Police", value: "B" },
+            { text: "Fleetwood Mac", value: "C" },
+            { text: "The Clash", value: "D" }
+        ],
+        correct: "A"
+    },
+
+{
+        question: "18. Which band released the album 'Appetite for Destruction' in 1987, featuring hits like 'Sweet Child o' Mine' and 'Welcome to the Jungle'?",
+        options: [
+            { text: "Nirvana", value: "A" },
+            { text: "Aerosmith", value: "B" },
+            { text: "Guns N' Roses", value: "C" },
+            { text: "Bon Jovi", value: "D" }
+        ],
+        correct: "C"
+},
+
+
+{
+question: "19. Which heavy metal band released the song 'Walk' in 1992, known for its distinctive groove and powerful riffs?",
+options: [
+    { text: "Metallica", value: "A" },
+    { text: "Pantera", value: "B" },
+    { text: "Slayer", value: "C" },
+    { text: "Megadeth", value: "D" }
+],
+correct: "B"
+
+},
+
+{
+question: "20.Which hit song by Metallica is in the album 'And Justice for All'?",
+options: [
+    { text: "Enter Sandman", value: "A" },
+    { text: "Master of Puppets", value: "B" },
+    { text: "One", value: "C" },
+    { text: "Whiskey in the Jar", value: "D" }
+],
+correct: "C"
+},
+
 ];
 
 let currentIndex = 0;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Favorites</title>
+    <title>Favourites</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="mood.css">
@@ -17,7 +17,7 @@
         <a href="../Kristiqn/home.html">Home</a>
         <a href="../Kristiqn/vote.html">Vote</a>
         <a href="../Deqn/quiz.html">Quiz</a>
-        <a href="../Deqn/quiz_result.html">QuizResult</a>
+        <a href="../Deqn/quiz_result.html">Quiz Result</a>
         <a href="favourites.html">Favourites</a>
         <a href="mood.html">Mood</a>
         <a href="piano.html">Piano</a>
@@ -26,7 +26,7 @@
     </header>
     <main>
       <section class="main-section">
-        <p class="title-favourites">MY FAVORITES</p>
+        <p class="title-sign">MY <span class="highlight">FAVOURITES</span></p>
       </section>
     
       <section class="section1">
@@ -35,7 +35,7 @@
         <section class="playlist" style="display:block;">
             <h2>Favorite Playlist</h2>
             <ul id="favourites-list">
-                <!-- Dynamically populated from localStorage -->
+
             </ul>
             <p id="empty-message" style="text-align: center; color: #cfe8ef; font-size: 16px;">No favourite songs yet. Add some from the Mood page!</p>
         </section>
@@ -52,7 +52,7 @@
 </footer>
 <script src="mood.js"></script>
 <script>
-// Load and display favourites on page load
+
 function loadFavourites(){
     const favourites = getFavourites();
     const list = document.getElementById('favourites-list');
@@ -87,7 +87,7 @@ function loadFavourites(){
     }
 }
 
-// Remove from favourites (called from favourites page)
+
 function removeFavouriteFromFavourites(index){
     const favourites = getFavourites();
     if(index >= 0 && index < favourites.length){
