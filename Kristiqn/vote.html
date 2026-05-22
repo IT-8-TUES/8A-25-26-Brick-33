@@ -59,7 +59,6 @@
            <h3 class="content-text">Like many System of a Down songs, “Sugar” doesn't have a specific meaning. The term “sugar” is a well-known euphemism for cocaine, which has even worse addictive effects than sugar itself, leading the song to be about the consequences of drug abuse.</h3>
            <div class="vote-container">
             <button class="vote-btn not-voted">Vote</button>
-            <span id="vote-counter">0</span>
            </div>
         </div>
         </div>
@@ -78,7 +77,6 @@
            <h3 class="content-text">The title track off Metallica's seminal Master of Puppets album is about the negative effects drugs can have on a person's life, written from the perspective of the drug itself. The song highlights how drugs control the person's life, how they take over every aspect.</h3>
             <div class="vote-container">
             <button class="vote-btn not-voted">Vote</button>
-            <span id="vote-counter">0</span>
            </div>
         </div> 
         </div>
@@ -98,7 +96,6 @@
            <h3 class="content-text">“Blind” is Korn's first single and music video. It was originally written and performed by Jonathan Davis' previous band Sexart, but underwent a number of changes before being recorded by Korn for their 1993 demo Neidermeyer's Mind and even more changes before appearing on the band’s 1994 self-titled debut album.</h3>
             <div class="vote-container">
             <button class="vote-btn not-voted">Vote</button>
-            <span id="vote-counter">0</span>
            </div>
         </div>
         </div>
@@ -117,7 +114,6 @@
            <h3 class="content-text">One of the most recognizable guitar riffs in rock'n'roll history. “Smoke on the Water” tells the true story of a fire igniting during a 1971 Frank Zappa concert in Montreux, Switzerland, where the band had come to record their next album, Machine Head.</h3>
             <div class="vote-container">
             <button class="vote-btn not-voted">Vote</button>
-            <span id="vote-counter">0</span>
            </div>
         </div>
         </div>
@@ -129,7 +125,7 @@
   </a>
 
   <hr class="footer-divider">
-  <p class="copyright">&copy; 2026 YourMusic. All rights reserved.</p>
+  <p class="copyright">&copy; 2026 Your Music. All rights reserved.</p>
 </footer>
 <script>
 const dialog = document.getElementById('popup');
@@ -148,37 +144,30 @@ openBtn.addEventListener('click', () => {
 const allVoteButtons = document.querySelectorAll('.vote-btn');
 
 allVoteButtons.forEach((voteBtn, index) => {
-    const storageKey = `song_vote_${index}`;
+    const storageKey = `song_vote_state_${index}`;
     let hasVoted = localStorage.getItem(storageKey) === 'true';
-    let currentVotes = hasVoted ? 1 : 0;
     
-    const voteCounter = voteBtn.nextElementSibling;
+    // Set initial layout state from memory
     if (hasVoted) {
         voteBtn.innerText = 'Voted';
         voteBtn.className = 'vote-btn voted';
-        voteCounter.innerText = '1';
     } else {
         voteBtn.innerText = 'Vote';
         voteBtn.className = 'vote-btn not-voted';
-        voteCounter.innerText = '0';
     }
 
-  
     voteBtn.addEventListener('click', () => {
         if (!hasVoted) {
             voteBtn.innerText = 'Voted';
             voteBtn.className = 'vote-btn voted';
-            currentVotes = 1; 
             hasVoted = true;
             localStorage.setItem(storageKey, 'true'); 
         } else {
             voteBtn.innerText = 'Vote';
             voteBtn.className = 'vote-btn not-voted';
-            currentVotes = 0; 
             hasVoted = false;
             localStorage.setItem(storageKey, 'false'); 
         }
-        voteCounter.innerText = currentVotes;
     });
 });
 </script>
