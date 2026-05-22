@@ -475,3 +475,22 @@ li::before {
 .fav-item .song-btn {
   min-width: auto;
 }
+
+.title-sign,
+.title-mood,
+.title-favourites,
+.title-piano {
+    animation-name: scaleUpBoris;      
+    animation-duration: 0.5s;     
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaleUpBoris {
+  from {
+    transform: scale(0.2); 
+  }
+  to {
+    transform: scale(1);           
+  }
+}
