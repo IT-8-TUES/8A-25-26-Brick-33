@@ -265,7 +265,7 @@ section.playlist h2 {
 footer {
   background-image:
     linear-gradient(90deg, #0e212fe6 0%, #1a344ed9 60%, #1a3f5c 100%),
-    url('footerbackground.png');
+    url('../Deqn/footerbackground.png');
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center;
