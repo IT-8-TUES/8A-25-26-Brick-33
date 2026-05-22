@@ -72,6 +72,8 @@ function stopKey(frequency, element) {
     }
     element.classList.remove('active');
 }
+createPiano();
+
 document.addEventListener('keydown', (e) => {
     const key = e.key.toLowerCase();
     const keyData = pianoKeys.find(k => k.qwerty === key);
@@ -94,4 +96,3 @@ document.addEventListener('keyup', (e) => {
         }
     }
 });
-createPiano();
