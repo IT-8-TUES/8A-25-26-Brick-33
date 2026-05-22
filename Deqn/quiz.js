@@ -161,7 +161,7 @@ const questions = [
     },
 
     {
-        question: "17. Which bandd released the hit song 'Sultans of Swing' in 1978?",
+        question: "17. Which band released the hit song 'Sultans of Swing' in 1978?",
         options: [
             { text: "Dire Straits", value: "A" },
             { text: "The Police", value: "B" },
