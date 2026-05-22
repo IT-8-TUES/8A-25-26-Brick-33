@@ -72,6 +72,7 @@ main {
     padding: 8px 12px;
     border-radius: 6px;
     transition: all .2s;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .nav-links a:hover {
@@ -85,6 +86,21 @@ main {
     font-size: 120px;
     color: #cfe8ef;
     font-weight: bold;
+    animation-name: scaleUp;      
+    animation-duration: 0.5s;     
+    animation-timing-function: ease-out; 
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.2); 
+  }
+  to {
+    transform: scale(1);           
+  }
 }
 
 .highlight {
@@ -101,7 +117,9 @@ main {
 .section1 {
     background-color: #f3f0f0;          
     padding-bottom: 40px;    
-    position: relative;       
+    position: relative;    
+    
+
 }
 
 .title-text{
@@ -228,16 +246,16 @@ main {
 footer {
   background-image:
     linear-gradient(90deg, #0e212fe6 0%, #1a344ed9 60%, #1a3f5c 100%),
-    url('colorful-music-notes-png.png');
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position: center;
-    background-blend-mode: normal, screen;
+    url('../Deqn/footerbackground.png');
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center;
+  background-blend-mode: normal, screen;
   padding: 40px 20px 20px 20px;
   min-height: 150px;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 }
 
 .footer-divider {
@@ -289,6 +307,21 @@ footer {
    font-size: 85px;
    margin:0px;
    text-align: center;
+   animation-name: scaleUp;      
+   animation-duration: 0.5s;     
+   animation-timing-function: ease-out; 
+   animation-fill-mode: forwards;
+}
+
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.2); 
+  }
+  to {
+    transform: scale(1);           
+  }
 }
 
 .vote-info-text{
